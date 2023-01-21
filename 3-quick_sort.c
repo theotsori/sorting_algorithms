@@ -6,7 +6,7 @@
  * @low: first lowest number to compare
  * @high: largest num to compare
  */
-void quick_sort_h(int *array, int low, int high)
+void quick_sort_h(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
@@ -20,18 +20,21 @@ void quick_sort_h(int *array, int low, int high)
 			if (array[j] <= pivot)
 			{
 				i++;
-				temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
-				print_array(array, high + 1);
+				if (i != j)
+				{
+					temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+					print_array(array, size);
+				}
 			}
 		}
 		temp = array[i + 1];
 		array[i + 1] = array[high];
 		array[high] = temp;
-		print_array(array, high + 1);
-		quick_sort_h(array, low, i);
-		quick_sort_h(array, i + 2, high);
+		print_array(array, size);
+		quick_sort_h(array, low, i, size);
+		quick_sort_h(array, i + 1, high, size);
 	}
 }
 
@@ -42,5 +45,5 @@ void quick_sort_h(int *array, int low, int high)
  */
 void quick_sort(int *array, size_t size)
 {
-	quick_sort_h(array, 0, size - 1);
+	quick_sort_h(array, 0, size - 1, size);
 }
