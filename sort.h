@@ -17,6 +17,7 @@ typedef struct listint_s
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
@@ -27,5 +28,12 @@ void quick_sort(int *array, size_t size);
 void quick_sort_h(int *array, int low, int high, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
+void counting_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
+void qiuck_sort_hoare(int *array, size_t size);
+/*void sort_deck(deck_node_t **deck);*/
 
 #endif /*sort.h*/
