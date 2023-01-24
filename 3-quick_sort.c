@@ -5,6 +5,7 @@
  * @array: numbers to be sorted
  * @low: first lowest number to compare
  * @high: largest num to compare
+ * @size: memory used by the algorithm
  */
 void quick_sort_h(int *array, int low, int high, size_t size)
 {

@@ -1,5 +1,11 @@
 #include "sort.h"
 
+/**
+ * counting_sort - sorts an array by comparison
+ * @array: numbers to be sorted
+ * @size: memory used be the algoritm
+ *
+ */
 void counting_sort(int *array, size_t size)
 {
 	int max = 0;
@@ -40,5 +46,5 @@ void counting_sort(int *array, size_t size)
 			array[index++] = m;
 		}
 	}
-	free (counting_array);
+	free(counting_array);
 }
