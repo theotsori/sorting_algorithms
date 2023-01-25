@@ -10,9 +10,9 @@
  */
 typedef struct listint_s
 {
-    const int n;
-    struct listint_s *prev;
-    struct listint_s *next;
+	const int n;
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 #include <stdlib.h>
@@ -36,6 +36,6 @@ void sift_down(int *array, size_t size, int i);
 void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
-void merge(int *array, int *left, int leftSize, int *right, int rightSize); 
+void merge(int *array, int *left, int leftSize, int *right, int rightSize);
 
 #endif /*sort.h*/
