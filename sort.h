@@ -36,10 +36,6 @@ void sift_down(int *array, size_t size, int i);
 void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
-int partition(int *array, int lo, int hi);
-void quick_sort_hoare_h(int *array, int lo, int hi);
-/*void merge(int *arr, int *left, int leftSize, int *right, int rightSize);*/
 void merge(int *array, int *left, int leftSize, int *right, int rightSize); 
-/*void sort_deck(deck_node_t **deck);*/
 
 #endif /*sort.h*/
